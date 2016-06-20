@@ -4,7 +4,7 @@
   "description": "It's just me playing with Basscss and CSS Modules",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base build",
+    "start": "webpack-dev-server --config webpack/development.config.js --content-base build",
     "lint": "eslint ./src"
   },
   "repository": {
