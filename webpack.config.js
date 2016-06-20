@@ -10,6 +10,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.css'],
+    root: [
+      path.resolve(path.join(process.cwd(), './src/styles'))
+    ],
   },
   module: {
     loaders: [

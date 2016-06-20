@@ -1,4 +1,4 @@
 .main {
-  composes: h2 from './styles/mobile';
-  composes: h1 from './styles/tablet';
+  composes: h2 from 'mobile';
+  composes: h1 from 'tablet';
 }
