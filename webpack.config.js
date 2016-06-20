@@ -1,17 +1,17 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const atImport = require('postcss-import');
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'build'),
-    publicPath: '/assets/',
+    path: 'build',
     filename: 'bundle.js',
   },
   resolve: {
     extensions: ['', '.js', '.css'],
     root: [
-      path.resolve(path.join(process.cwd(), './src/styles'))
+      path.resolve(path.join(process.cwd(), './src/styles')),
     ],
   },
   module: {
@@ -30,5 +30,6 @@ module.exports = {
       },
     ],
   },
+  plugins: [new HtmlWebpackPlugin()],
   postcss: () => [atImport()],
 };
