@@ -4,8 +4,9 @@
   "description": "It's just me playing with Basscss and CSS Modules",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint ./src",
     "start": "webpack-dev-server --config webpack/development.config.js --content-base build",
-    "lint": "eslint ./src"
+    "build": "webpack -p --config webpack/production.config.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "eslint-plugin-import": "^1.8.1",
     "eslint-plugin-jsx-a11y": "^1.5.3",
     "eslint-plugin-react": "^5.2.2",
+    "extract-text-webpack-plugin": "github:michelebertoli/extract-text-webpack-plugin#614c3bb1ed72587218aa644df12bbf514fb77a06",
     "html-webpack-plugin": "^2.21.0",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
