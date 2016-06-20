@@ -1,0 +1,3 @@
+.main {
+  composes: h1 from 'basscss/css/basscss.css';
+}
