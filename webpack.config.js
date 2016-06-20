@@ -8,6 +8,9 @@ module.exports = {
     publicPath: '/assets/',
     filename: 'bundle.js',
   },
+  resolve: {
+    extensions: ['', '.js', '.css'],
+  },
   module: {
     loaders: [
       {
