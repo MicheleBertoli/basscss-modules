@@ -1,0 +1,4 @@
+.main {
+  composes: h2 from './styles/base.css';
+  composes: h1 from './styles/base@md.css';
+}

@@ -1,4 +1,5 @@
 const path = require('path');
+const atImport = require('postcss-import');
 
 module.exports = {
   entry: './src/index.js',
@@ -19,8 +20,9 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style!css?modules',
+        loader: 'style!css?modules&localIdentName=[local]--[hash:base64:5]&importLoaders=1!postcss',
       },
     ],
   },
+  postcss: () => [atImport()],
 };
